@@ -26,9 +26,10 @@
 	<description>Geomajas GWT client: Main - Parent POM</description>
 
 	 <scm>
-                <connection>scm:git:git@github.com:geomajas/geomajas-project-client-gwt.git</connection>
-                <developerConnection>scm:git:git@github.com:geomajas/geomajas-project-client-gwt.git</developerConnection>
-                <url>https://github.com/geomajas/geomajas-project-client-gwt.git</url>
+                <connection>scm:git:git@github.com:Geosparc/geomajas-project-client-gwt.git</connection>
+                <developerConnection>scm:git:git@github.com:Geosparc/geomajas-project-client-gwt
+					.git</developerConnection>
+                <url>https://github.com/Geosparc/geomajas-project-client-gwt.git</url>
         </scm>
 
 	<developers>
