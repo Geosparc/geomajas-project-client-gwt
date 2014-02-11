@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.geomajas.plugin</groupId>
 		<artifactId>geomajas-client-gwt-plugin-javascript-api-parent</artifactId>
-		<version>1.5.0-magdageo-SNAPSHOT</version>
+		<version>1.15.0-magdageo-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>geomajas-plugin-javascript-api-gwt-example</artifactId>
