@@ -1,7 +1,7 @@
 <!--
   ~ This is part of Geomajas, a GIS framework, http://www.geomajas.org/.
   ~
-  ~ Copyright 2008-2013 Geosparc nv, http://www.geosparc.com/, Belgium.
+  ~ Copyright 2008-2014 Geosparc nv, http://www.geosparc.com/, Belgium.
   ~
   ~ The program is available in open source according to the GNU Affero
   ~ General Public License. All contributions in this program are covered
@@ -52,16 +52,18 @@
 
 	<modules>
 		<module>print-gwt</module>
-		<module>print-gwt-example</module>
 		<module>print-gwt-example-jar</module>
 	</modules>
 
 	<profiles>
 		<profile>
-			<id>default</id>
+			<id>full-build</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
+            <modules>
+                <module>print-gwt-example</module>
+            </modules>
 		</profile>
 		<profile>
 			<id>skipDocs</id>

@@ -1,7 +1,7 @@
 <!--
   ~ This is part of Geomajas, a GIS framework, http://www.geomajas.org/.
   ~
-  ~ Copyright 2008-2013 Geosparc nv, http://www.geosparc.com/, Belgium.
+  ~ Copyright 2008-2014 Geosparc nv, http://www.geosparc.com/, Belgium.
   ~
   ~ The program is available in open source according to the GNU Affero
   ~ General Public License. All contributions in this program are covered
@@ -128,6 +128,11 @@
 				<version>${gwt-client-common-gwt-version}</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.geomajas.plugin</groupId>
+				<artifactId>geomajas-client-gwt2-plugin-editing-server-extension</artifactId>
+				<version>${gwt-client-common-gwt-version}</version>
 			</dependency>
 
 
@@ -495,6 +500,21 @@
 				<module>smartgwt-archetype-documentation</module>
 				<module>documentation</module>
 			</modules>
+			<!-- Include resources, java and gwt files in build -->
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/resources</directory>
+					</resource>
+					<resource>
+						<directory>src/main/java</directory>
+						<includes>
+							<include>**/*.java</include>
+							<include>**/*.gwt.xml</include>
+						</includes>
+					</resource>
+				</resources>
+			</build>
 		</profile>
 		<profile>
 			<id>clientOnly</id>

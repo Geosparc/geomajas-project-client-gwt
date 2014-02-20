@@ -1,7 +1,7 @@
 <!--
   ~ This is part of Geomajas, a GIS framework, http://www.geomajas.org/.
   ~
-  ~ Copyright 2008-2013 Geosparc nv, http://www.geosparc.com/, Belgium.
+  ~ Copyright 2008-2014 Geosparc nv, http://www.geosparc.com/, Belgium.
   ~
   ~ The program is available in open source according to the GNU Affero
   ~ General Public License. All contributions in this program are covered
@@ -32,13 +32,11 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 					<property name="distance" value="100000" />
 					<property name="type" value="CLOSEST_ENDPOINT" />
 					<property name="layerId" value="clientLayerCountries" />
-					<property name="priority" value="true" />
 				</bean>
 				<bean class="org.geomajas.configuration.SnappingRuleInfo">
 					<property name="distance" value="50000" />
 					<property name="type" value="NEAREST_POINT" />
 					<property name="layerId" value="clientLayerCountries" />
-					<!--<property name="priority" value="false" />-->
 				</bean>
 			</list>
 		</property>
