@@ -32,6 +32,7 @@
                 <url>https://github.com/Geosparc/geomajas-project-client-gwt.git</url>
         </scm>
 
+
 	<developers>
 		<developer>
 			<id>oliverm</id>
@@ -64,14 +65,10 @@
 	
 	<modules>
 		<module>common-gwt-smartgwt</module>
-<!--
-		<module>smartgwt-archetype</module>
-		<module>archetype</module>
--->
 		<module>client</module>
 		<module>example-base</module>
-		<module>example</module>
 		<module>example-jar</module>
+		<module>example</module>
 	</modules>
 
 	<dependencyManagement>
@@ -485,7 +482,38 @@
 
 	</dependencyManagement>
 
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>META-INF/geomajasContext*.xml</include>
+					<include>META-INF/geomajasWebContext*.xml</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>META-INF/geomajasContext*.xml</exclude>
+					<exclude>META-INF/geomajasWebContext*.xml</exclude>
+				</excludes>
+			</resource>
+		</resources>
+	</build>
+
 	<profiles>
+		<profile>
+			<id>full-build</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>smartgwt-archetype-documentation</module>
+				<module>documentation</module>
+			</modules>
+		</profile>
 		<profile>
 			<id>default</id>
 			<activation>
@@ -493,8 +521,6 @@
 			</activation>
 			<modules>
 				<module>plugin</module>
-				<module>smartgwt-archetype-documentation</module>
-				<module>documentation</module>
 			</modules>
 			<!-- Include resources, java and gwt files in build -->
 			<build>
