@@ -71,23 +71,10 @@
 	<profiles>
 		<!--  include sources in build -->
 		<profile>
-			<id>default</id>			
+			<id>full-build</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
-			<build>
-				<resources>
-					<resource>
-						<directory>src/main/resources</directory>
-					</resource>
-					<resource>
-						<directory>src/main/java</directory>
-						<includes>
-							<include>**/*.java</include>
-						</includes>
-					</resource>
-				</resources>
-			</build>
 		</profile>
 		<!--  no sources needed in eclipse -->
 		<profile>
